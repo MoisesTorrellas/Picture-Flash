@@ -1,0 +1,413 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Pacifico&family=Roboto:wght@400;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: #fff;
+   /*  font-family: 'Dancing Script', cursive; */
+    font-family: 'Pacifico', cursive;
+    /* font-family: 'Roboto', sans-serif; */
+}
+
+/* -----------------------Estilos principales----------------------- */
+
+.contenedor{
+    width: 95%;
+    max-width: 1200px;
+    margin: 0 auto;
+    overflow: hidden;
+    padding: 100px 0;
+    height: auto;
+}
+
+a{
+    text-decoration: none;
+}
+/* --------------------------Estilos nav--------------------------*/
+
+.hero{
+    width: 100%;
+    min-height: 100vh;
+    
+}
+
+.nav-hero{
+    height: 70px;
+    background: #fff;
+    
+}
+.nav-contenedor{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: inherit;
+    padding: 0;
+}
+.logo{
+    margin-left: 70px;
+}
+.logo-nombre{
+    font-size: 30px;
+    font-weight: 700;
+    font-family: 'Dancing Script', cursive;
+    
+}
+.link{
+    margin-right: 20px;
+    margin-left: 20px;
+    font-size: 18px;
+    color: #000;
+}
+.link:hover{
+    text-decoration: overline underline;
+}
+.buscar{
+    margin: 0;
+}
+.buscar-modifier{
+    background: none;
+    border: none;
+}
+.barra-buscar{
+    width: 150px;
+    height: 40px;
+    outline: none;
+    margin: 0 5px 0 5px;
+    border-bottom: 3px solid #000;
+    font-family: inherit;
+    font-size: inherit;
+    padding-left: 10px;
+    padding-right: 40px;
+    
+}
+.lupa{
+    position: relative;
+    color: #000;
+    font-size: 30px;
+    text-align: center;
+    right: 45px;
+    top: 10px;
+}
+/* -----------------------Estilos hero-main----------------------- */
+.hero-main{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: auto;
+    color: #fff;
+    font-weight: 200;
+}
+.hero-section{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(1.jpg);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    overflow: hidden;
+    height: calc(100vh - 70px);
+    border-right: 1px solid #fff;
+}
+.hero-section-modifier{
+    width: 50%;
+    border-left: 1px solid #fff;
+    background-image: url(2.jpg);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    overflow: hidden;
+}
+.hero-img{
+    width: 50%;
+}
+
+.img-hero{
+    width: 70%;
+    margin-left: 50px; 
+    border-radius: 10px;
+}
+.hero-texto{
+    width: 50%;
+}
+.hero-title{
+    bottom: 10px;
+    font-size: 40px;
+    font-family: 'Dancing Script', cursive;
+    text-decoration: underline overline;
+}
+.texto{
+    width: 80%;
+    position: relative;
+    top: 10px;
+    left: 10px;
+}
+/* ----------------------------Estilos categorias---------------------------- */
+.categorias{
+    display: flex;
+    width: 100%;
+    height: auto;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.categoria-title{
+    text-align: center;
+    margin:100px 0 25px 0;
+    color: #000;
+    font-size: 40px;
+    text-decoration: overline underline ;
+}
+.categoria-contenedor{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 100px;
+}
+.categoria{
+    display: inline-flex;
+    position: relative;
+    align-items: center;
+    background-color: #000;
+    font-size: 20px;
+    text-align: center;
+    color: #fff;
+    font-family: 'Pacifico';
+    margin: 0 20px 30px 20px;
+    padding: 20px 80px;
+    border-radius: 50px;
+    border: none;
+    cursor: pointer;
+    transition: .3s ease all;
+    overflow: hidden;
+    
+}
+span{
+    z-index: 2;
+}
+
+.categoria.animacion:after{
+    content: "";
+	width: 1px;
+	height: 1px;
+	background: none;
+	position: absolute;
+	z-index: 1;
+	top: 50%;
+	left: 50%;
+	transition: .3s ease all;
+	border-radius: 100px;
+	transform-origin: center;
+}
+
+.categoria.animacion:hover::after{
+    transform: scale(150);
+	background: #57606f;
+}
+.categoria.animacion:hover {
+    background: #2f3542; 
+}
+/* -------------------------Estilos galeria------------------------- */
+.galeria{
+    background: #eeeeee;
+}
+.contenedor-galeria{
+    display: flex;
+    padding: 5px;
+    flex-wrap: wrap;
+    align-items: stretch;
+}
+.img-galeria{
+    width: 100%;
+    margin: 5px;
+    height: 70vh ;
+    object-fit: cover;
+    cursor: pointer;
+}
+.column{
+    flex: 25%;
+    padding: 5px;
+}
+.galeria-title{
+    text-align: center;
+    margin:10px 0 40px 0;
+    color: #000;
+    font-size: 40px;
+    text-decoration: overline underline ;
+}
+
+/* -------------------------------Estilos email------------------------------- */
+.conteiner{
+    width: 95%;
+    height: 60vh;
+    margin: 100px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    
+}
+.email-title{
+    width: 70%;
+    text-align: center;
+    font-size: 35px;
+}
+.email-text{    
+    text-align: center;
+    font-size: 25px;
+}
+.news-user{
+    width: 70%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+.news-user-email{
+    margin-top: 30px;
+    width: 50%;
+    height: 70px;
+    background: none;
+    font-size: 17px;
+    padding-left:20px;
+    padding-right: 120px;
+    color: #000;
+    font-family: 'Pacifico';
+    border: none;
+    border-bottom: 4px solid #000;
+    
+}
+.news-user-submit{
+    width: 100px;
+    height: 50px;
+    background: #000;
+    color: #fff;
+    font-family: 'Pacifico';
+    border: none;
+    border-radius: 10% ;
+    margin: 0;
+    position: relative;
+    bottom: 60px ;
+    left: 150px;
+    cursor: pointer;
+}
+.news-user-submit:hover{
+    text-decoration: overline underline;
+}
+/* --------------------------------Estilos footer-------------------------------- */
+.contact{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.item-contact{
+    background: #a4b0be;
+    text-align: center;
+    width: 25%;
+}
+.item-contact-verde{
+    background: #747d8c;
+}
+.contact-title{
+    padding-bottom: 50px  ;
+    font-size: 17px;
+ }
+.contact-icon{
+    font-size: 17px;
+    padding-top: 50px;
+}
+/* ------------------------------------Estilos Modal------------------------------------ */
+.modal-contenedor{
+    opacity: 0;
+    visibility: hidden;
+    position: fixed;
+    z-index: 1000;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0,0,0,0.5);
+}
+.modal{
+    width: 80%;
+    height: 90%;
+    background: #ffffff;
+    position: relative;
+    transition: transform 1s;
+    transform: translateY(-0%);
+    border-radius: 10px;
+}
+/* .modal-close{
+    transform: translateY(-200%);
+} */
+.nav-modal{
+    width: 100%;
+    height: 13vh;
+    border-bottom: 2px solid #a4b0be;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.user-img{
+    height: 80%;
+    width: 50px;
+    margin: 5px 0px;
+    margin-left: 10px;
+    object-fit: cover;
+    border-radius: 100px;
+}
+.boton-follow{
+    width: 100px;
+    padding: 8px 0;
+    border: 1px solid rgb(211, 211, 211);
+    text-align: center;
+    color: #000000;
+    background-color: #DCD9D4;
+     background-image: linear-gradient(to bottom, rgba(255,255,255,0.50) 0%, rgba(0,0,0,0.50) 100%), radial-gradient(at 50% 0%, rgba(255,255,255,0.10) 0%, rgba(0,0,0,0.50) 50%);
+    background-blend-mode: soft-light,screen;
+    position: relative;
+    left: -350px;
+}
+.contenedor-img-modal{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+}
+.modal-img{
+    width: 60%; 
+    border-radius: 30px;
+}
+.user-info{
+   width: 20%;
+   margin: 5px 0;
+   position: relative;
+   left: -130px;
+}
+.close{
+    color: #000000;
+    margin: 20px;
+    padding: 10px 20px;
+    position: relative;
+    bottom: 250px;
+    background: #ffffff;
+    border-radius: 50px;
+    cursor: pointer;
+}
+/* ---------------------------------Estilos responsive--------------------------------- */
+@media screen and (max-width:900px){
+    .logo-nombre{
+        font-size: 25px;
+    }
+}
